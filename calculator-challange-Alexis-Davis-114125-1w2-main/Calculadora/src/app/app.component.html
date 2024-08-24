@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <title>Calculadora</title>
+</head>
+<body>
+  <div class="container" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 40px;">
+    <div style="border: 2px solid; border-radius: 5px; padding: 10px;">
+      <h1>Calculadora</h1>
+      <div style="border: 1px solid;"></div>
+      <div>
+        <p style="padding: 2px; margin-left: 31%;">Valor 1</p>
+        <input type="number" id="input1" placeholder="Ingrese el valor 1">
+      </div>
+      <div>
+        <p style="padding: 2px; margin-left: 31%;">Valor 2</p>
+        <input type="number" id="input2" placeholder="Ingrese el valor 2">
+      </div>
+      <div style="border: 1px solid; margin-top: 10px;"></div>
+      <div style="padding-top: 20px;">
+        <input type="text" [value]="result" placeholder="Resultado" readonly style="height: 20px;">
+      </div>
+      <div style="padding: 5px; display: flex; justify-content: space-between; flex-direction: row;">
+        <button (click)="calcular('+')" style="padding: 20px;">+</button>            
+        <button (click)="calcular('-')" style="padding: 20px;">-</button>    
+        <button (click)="calcular('^')" style="padding: 20px;">^</button>   
+      </div>
+      <div style="padding: 5px; display: flex; justify-content: space-between; flex-direction: row;">
+        <button (click)="calcular('*')" style="padding: 20px;">x</button>            
+        <button (click)="calcular('/')" style="padding: 20px;">/</button>    
+        <button (click)="calcular('c')" style="padding: 20px;">c</button>   
+      </div>
+    </div>
+  </div>
+</body>
+</html>
